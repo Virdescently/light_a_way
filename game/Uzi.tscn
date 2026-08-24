@@ -3,6 +3,7 @@
 [ext_resource path="res://assets/uzi-gun-pixel-art-11563242571ws8edutuwq-2.png" type="Texture" id=1]
 [ext_resource path="res://Uzi.gd" type="Script" id=2]
 
+
 [node name="Uzi" type="Node2D"]
 position = Vector2( 307, 190 )
 scale = Vector2( 0.2, 0.2 )

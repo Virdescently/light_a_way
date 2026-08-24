@@ -3,6 +3,7 @@
 [ext_resource path="res://EnemyUzi.gd" type="Script" id=1]
 [ext_resource path="res://assets/uzi-gun-pixel-art-11563242571ws8edutuwq-2.png" type="Texture" id=2]
 
+
 [sub_resource type="CircleShape2D" id=1]
 radius = 13473.5
 

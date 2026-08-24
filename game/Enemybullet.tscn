@@ -4,6 +4,7 @@
 [ext_resource path="res://Enemybullet.gd" type="Script" id=2]
 [ext_resource path="res://assets/light.png" type="Texture" id=3]
 
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.00005
 height = 63.9999
