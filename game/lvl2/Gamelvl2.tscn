@@ -97,7 +97,7 @@ position = Vector2( 561.25, 375.5 )
 position = Vector2( 639.75, 197.25 )
 
 [node name="Rangedenemy" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 956.75, 657.5 )
+position = Vector2( 974.75, 519.75 )
 
 [node name="Rangedenemy2" parent="Enemies" instance=ExtResource( 4 )]
 position = Vector2( 85.5, 255.5 )
@@ -115,13 +115,13 @@ position = Vector2( 507.5, 451.75 )
 position = Vector2( 819.5, 378.5 )
 
 [node name="Rangedenemy10" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 289, 844.75 )
+position = Vector2( 141, 853.75 )
 
 [node name="Rangedenemy11" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 1046.5, 136.75 )
+position = Vector2( 1027.5, 157.5 )
 
 [node name="Rangedenemy13" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 1354, 256.5 )
+position = Vector2( 1233.25, 429.25 )
 
 [node name="Rangedenemy15" parent="Enemies" instance=ExtResource( 4 )]
 position = Vector2( 1459.75, 815.75 )
@@ -130,22 +130,21 @@ position = Vector2( 1459.75, 815.75 )
 position = Vector2( 1356.5, 1060 )
 
 [node name="Rangedenemy17" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 1665.25, 500.5 )
+position = Vector2( 1511.25, 583 )
 
 [node name="Rangedenemy19" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 1238.25, 1256.25 )
+position = Vector2( 1211.5, 1221.5 )
 
 [node name="Rangedenemy20" parent="Enemies" instance=ExtResource( 4 )]
 position = Vector2( 450.25, 1168.25 )
 
 [node name="Rangedenemy21" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 1873, 687.25 )
+position = Vector2( 1055.25, 753.5 )
 
 [node name="Rangedenemy22" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 821, 1319.25 )
+position = Vector2( 837, 1208.5 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -161,3 +160,10 @@ margin_right = 1028.0
 margin_bottom = 597.0
 custom_fonts/font = SubResource( 3 )
 text = "R : RETRY"
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSort"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/StaticBody2D"]
+polygon = PoolVector2Array( -177, -181.75, -196.75, -166.75, -205.5, -123, -219.75, -120.75, -221.5, -105.75, -236.5, -90.5, -315, 90.5, -274.25, 778, -108.25, 860, -20, 1193, 540, 1320.75, 902.25, 1434.25, 1449.75, 1415.25, 1676.25, 1294.5, 1808.5, 1041.5, 1910.5, 845.25, 1955.75, 607.25, 1751.75, 260, 1234.5, -30.75, 555, -212, -7.5, -212, -139.75, -181.75, -166, -132.75, -113.25, -87.5, -26.5, -121.25, 305.75, -136.5, 574, -79.75, 898.5, 7, 1208.25, 109, 1487.5, 316.5, 1687.75, 588.5, 1812.25, 743.25, 1687.75, 966, 1438.5, 1287, 694.75, 1287, 72, 1154, -111.75, 819.25, -211.5, 222.25 )
