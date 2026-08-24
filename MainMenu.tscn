@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/background.png" type="Texture" id=2]
+[ext_resource path="res://assets/OpenSans-Bold.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 921.5, 9.99988 )
+scale = Vector2( 83.9922, 39.6094 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 1691.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+text = "Welcome To Shooting Chaos, a game where u rely on flare guns to guide ur way home"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 6.0
+margin_top = 45.0
+margin_right = 926.0
+margin_bottom = 138.0
+custom_fonts/font = SubResource( 2 )
+text = "Such a path to home is filled with obstacles, will u pick up ur light and find urself at ur safehaven?"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 94.0
+margin_right = 1006.0
+margin_bottom = 569.0
+custom_fonts/font = SubResource( 3 )
+text = "INSTRUCTIONS:
+
+WASD : Movement
+
+Shift : Run
+
+LeftClick: Shoot light bullets to lure enemies away from u
+
+R = To try again
+
+ENTER = START"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 480.0
+margin_right = 941.0
+margin_bottom = 641.0
+custom_fonts/font = SubResource( 4 )
+text = "Warning... This game is hard even if u do listen to these instructions,
+ u may have to be stuck in lvl1 for 20 attempts. I wanted to make a game that is hard and slightly fun.
+GoodLuck and Enjoy because lvl 2 is much harder "

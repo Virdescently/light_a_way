@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/zombie_tilesheet.png" type="Texture" id=1]
+[ext_resource path="res://game/EnemyUzi.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ranged enemy.gd" type="Script" id=3]
+[ext_resource path="res://assets/light.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 320.039
+
+[node name="Rangedenemy" type="Area2D"]
+scale = Vector2( 0.2, 0.2 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 5 )
+color = Color( 0.784314, 0.101961, 0.101961, 1 )
+energy = 0.6
+
+[node name="RangeDetection" type="CollisionShape2D" parent="."]
+position = Vector2( 5.00002, 4.76837e-06 )
+shape = SubResource( 2 )
+
+[node name="rangedsprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 9
+vframes = 3
+
+[node name="EnemyGun" type="Node2D" parent="."]
+position = Vector2( 0, -1.49012e-07 )
+scale = Vector2( 0.958114, 0.617753 )
+
+[node name="EnemyUzi" parent="EnemyGun" instance=ExtResource( 2 )]
+position = Vector2( 10.4372, 32.3755 )
+scale = Vector2( 0.0807683, 0.0841316 )

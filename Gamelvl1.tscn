@@ -1,0 +1,166 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://game/lvl1/Grassland.tres" type="TileSet" id=1]
+[ext_resource path="res://game/lvl1/Gamelvl1.gd" type="Script" id=2]
+[ext_resource path="res://game/lvl1/Map.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/entities/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/entities/enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/OpenSans-Bold.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.125, 34.75 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 6 )
+
+[node name="Level1" type="Node2D"]
+scale = Vector2( 4, 4 )
+script = ExtResource( 2 )
+
+[node name="Level1map" parent="." instance=ExtResource( 3 )]
+
+[node name="Enemies" type="YSort" parent="."]
+position = Vector2( 0, -0.25 )
+
+[node name="enemy1" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 341.75, 158.5 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 781, 480 )
+
+[node name="enemy3" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1105, 34 )
+
+[node name="enemy4" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 612.75, 453 )
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 910.25, 528.25 )
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 479, 492.5 )
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1134.75, 262.25 )
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 892.25, 239.75 )
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 775.5, 184.75 )
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1141.5, 388 )
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 910.25, 435 )
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1006.75, 368.75 )
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 864.75, 121.75 )
+
+[node name="Enemy15" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1006.75, 368.75 )
+
+[node name="Enemy16" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 820.75, 332.75 )
+
+[node name="Enemy17" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1077.75, 492.75 )
+
+[node name="Enemy18" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1007.75, 226.75 )
+
+[node name="Enemy19" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1007.75, 226.75 )
+
+[node name="Enemy20" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 955.75, 71.75 )
+
+[node name="Enemy21" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 864.75, 121.75 )
+
+[node name="Enemy22" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1084.75, 118.75 )
+
+[node name="Enemy23" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 492.5, 216.75 )
+
+[node name="Enemy24" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 780.75, 33.75 )
+
+[node name="Enemy25" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 419.75, 392.75 )
+
+[node name="Enemy26" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 580.5, 368.5 )
+
+[node name="Enemy27" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 714.75, 351.75 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 195, 156.5 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( -7.62939e-06, -1.52588e-05 )
+current = true
+process_mode = 0
+
+[node name="World Border" type="YSort" parent="."]
+position = Vector2( 0, 0.25 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World Border"]
+position = Vector2( 0, -0.25 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World Border/StaticBody2D"]
+position = Vector2( 0.25, 0 )
+polygon = PoolVector2Array( 1961.25, 878, -193.5, 898.75, -26, -160, 243.25, -155.25, 398.75, -183.5, 693, -192, 1702.75, -181.25, 2080, 727.75, 1193.75, 600, 1193, -45.25, 70.25, -27, 66, 613.5, 1183.5, 596.5, 2001, 723 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="World Border/StaticBody2D"]
+polygon = PoolVector2Array( 386.5, 528.75, 395.5, 529.25, 397.75, 543.5, 450.75, 543.75, 451.5, 527.75, 657.75, 527.75, 670, 512.75, 681.5, 496.75, 750.25, 497.25, 752.25, 527.25, 846, 527.25, 847.5, 543.75, 1153.75, 544.25, 1157.25, 459, 1140, 461.25, 1140.5, 211.5, 1152, 208.5, 1158, 12.25, 1140.75, 12.25, 1140.75, -6.5, 1139.25, -2.75, 1063, -0.5, 755.75, -2, 748.25, -40.25, 1193.25, -48.5, 1198.25, 605.25, 387.75, 607 )
+
+[node name="Finish area" type="Area2D" parent="."]
+position = Vector2( -0.75, 0 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="Home" type="TileMap" parent="Finish area"]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 13, 9, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish area"]
+position = Vector2( 865.75, 34 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 2.494
+anchor_right = 4.617
+anchor_bottom = 2.277
+margin_left = -2327.86
+margin_top = 224.0
+margin_right = -3466.81
+margin_bottom = -545.2
+custom_fonts/font = SubResource( 3 )
+
+[node name="Retry" type="Label" parent="CanvasLayer"]
+margin_left = 3.0
+margin_right = 1032.0
+margin_bottom = 608.0
+custom_fonts/font = SubResource( 4 )
+text = "R to retry                                                      "
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2( 194.5, 156 )
+scale = Vector2( 1.73165, 1.91342 )
+color = Color( 0, 0, 0, 1 )
